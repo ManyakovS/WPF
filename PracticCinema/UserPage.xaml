@@ -1,0 +1,65 @@
+﻿<Window x:Class="PracticCinema.src.UserPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticCinema.src"
+        mc:Ignorable="d"
+        Title="" Height="640" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        WindowStyle="ToolWindow">
+    <Grid Background="#faffff">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="8.5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Border CornerRadius="15" HorizontalAlignment="Left" Margin="20px 20px 0 0" Height="50px" Width="50px">
+                    <Border.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="src/Logo.png" AlignmentY="Center" AlignmentX="Left"/>
+                    </Border.Background>
+                    <Button Style="{DynamicResource InvisibleButton}" Click="Menu_Click"></Button>
+                </Border>
+            </Grid>
+            <Grid Grid.Column="1">
+                <!--<Border HorizontalAlignment="Left" Width="300px" Margin="10px 30px 0px 0px" Height="35px" BorderBrush="#723d92" BorderThickness="2" Background="Transparent">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="10px 0 0 0" Height="30px" Width="30px" >
+                            <TextBlock.Background>
+                                <ImageBrush Stretch="Uniform" ImageSource="src/Search.png" AlignmentY="Center" AlignmentX="Left"/>
+                            </TextBlock.Background>
+                        </TextBlock>
+
+                        <TextBox Width="256" BorderThickness="0" BorderBrush="Transparent" Padding="2px 7px 0 0" VerticalContentAlignment="Center" FontSize="16" FontWeight="SemiBold" FontFamily="Poppins">
+                            <TextBox.Text>
+                                Search movie, cinema, genre
+                            </TextBox.Text>
+                        </TextBox>
+
+                    </StackPanel>
+                </Border>-->
+
+                <Border CornerRadius="15" HorizontalAlignment="Right" Margin="0 20px 20px 0" Height="50px" Width="50px">
+                    <Border.Background>
+                        <ImageBrush x:Name="icon" Stretch="Uniform" ImageSource="src/TestAvatar.png" AlignmentY="Center" AlignmentX="Left"/>
+                    </Border.Background>
+                    <Button Style="{DynamicResource InvisibleButton}" Click="Menu_Click"></Button>
+                </Border>
+            </Grid>
+        </Grid>
+        <Frame NavigationUIVisibility="Hidden" Grid.Row="1" Margin="20px 10px 20px 20px" Height="490px" Width="760px" x:Name="frame"/>
+
+
+    </Grid>
+</Window>

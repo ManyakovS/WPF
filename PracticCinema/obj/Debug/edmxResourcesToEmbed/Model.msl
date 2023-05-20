@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PracticCinemaModelContainer" CdmEntityContainer="PracticCinemaEntities">
+    <EntitySetMapping Name="Asset">
+      <EntityTypeMapping TypeName="PracticCinemaModel.Asset">
+        <MappingFragment StoreEntitySet="Asset">
+          <ScalarProperty Name="assetsId" ColumnName="assetsId" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="filmId" ColumnName="filmId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CinemaHall">
+      <EntityTypeMapping TypeName="PracticCinemaModel.CinemaHall">
+        <MappingFragment StoreEntitySet="CinemaHall">
+          <ScalarProperty Name="cinemaHallId" ColumnName="cinemaHallId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="numberOfSeats" ColumnName="numberOfSeats" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee">
+      <EntityTypeMapping TypeName="PracticCinemaModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="employeeId" ColumnName="employeeId" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="secondName" ColumnName="secondName" />
+          <ScalarProperty Name="jobTitle" ColumnName="jobTitle" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Film">
+      <EntityTypeMapping TypeName="PracticCinemaModel.Film">
+        <MappingFragment StoreEntitySet="Film">
+          <ScalarProperty Name="filmId" ColumnName="filmId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="rentalStart" ColumnName="rentalStart" />
+          <ScalarProperty Name="rentalEnd" ColumnName="rentalEnd" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Place">
+      <EntityTypeMapping TypeName="PracticCinemaModel.Place">
+        <MappingFragment StoreEntitySet="Place">
+          <ScalarProperty Name="placeId" ColumnName="placeId" />
+          <ScalarProperty Name="placeNumber" ColumnName="placeNumber" />
+          <ScalarProperty Name="rowNumber" ColumnName="rowNumber" />
+          <ScalarProperty Name="cinemaHallId" ColumnName="cinemaHallId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Session">
+      <EntityTypeMapping TypeName="PracticCinemaModel.Session">
+        <MappingFragment StoreEntitySet="Session">
+          <ScalarProperty Name="sessionId" ColumnName="sessionId" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="timeEnd" ColumnName="timeEnd" />
+          <ScalarProperty Name="filmId" ColumnName="filmId" />
+          <ScalarProperty Name="cinemaHallId" ColumnName="cinemaHallId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ticket">
+      <EntityTypeMapping TypeName="PracticCinemaModel.Ticket">
+        <MappingFragment StoreEntitySet="Ticket">
+          <ScalarProperty Name="ticketId" ColumnName="ticketId" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="sessionId" ColumnName="sessionId" />
+          <ScalarProperty Name="placeId" ColumnName="placeId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="PracticCinemaModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="passwordHash" ColumnName="passwordHash" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

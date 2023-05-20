@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bd2096574e394e468ce00d7926e2ac08" Name="Diagram1" ZoomLevel="92">
+        <EntityTypeShape EntityType="PracticCinemaModel.Asset" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="PracticCinemaModel.CinemaHall" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PracticCinemaModel.Employee" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="PracticCinemaModel.Film" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PracticCinemaModel.Place" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PracticCinemaModel.Session" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PracticCinemaModel.Ticket" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PracticCinemaModel.User" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="PracticCinemaModel.FK_Asset_Film_FilmId" ManuallyRouted="false" />
+        <AssociationConnector Association="PracticCinemaModel.FK_Place_CinemaHall_CinemaHallId" ManuallyRouted="false" />
+        <AssociationConnector Association="PracticCinemaModel.FK_Session_CinemaHall_CinemaHallId" ManuallyRouted="false" />
+        <AssociationConnector Association="PracticCinemaModel.FK_Employee_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="PracticCinemaModel.FK_Session_Film_FilmId" ManuallyRouted="false" />
+        <AssociationConnector Association="PracticCinemaModel.FK_Ticket_Place_PlaceId" ManuallyRouted="false" />
+        <AssociationConnector Association="PracticCinemaModel.FK_Ticket_Session_SessionId" ManuallyRouted="false" />
+        <AssociationConnector Association="PracticCinemaModel.FK_Ticket_Users_UserId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

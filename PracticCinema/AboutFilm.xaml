@@ -1,0 +1,153 @@
+﻿<Page x:Class="PracticCinema.AboutFilm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticCinema" 
+      mc:Ignorable="d" 
+      d:DesignHeight="490" d:DesignWidth="760"
+      Title="AboutFilm">
+
+    <Grid Background="#FFF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="6.5*"/>
+            <ColumnDefinition Width="3.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="9.4*"/>
+        </Grid.RowDefinitions>
+        <!--Фильм + Описание-->
+        <Grid Grid.RowSpan="2" >
+            <Border BorderBrush="#723D92" BorderThickness="0 2 0 0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                    <RowDefinition Height="250px"/>
+                    <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Height="240px" VerticalAlignment="Top" Margin="20px 5px 20px 5px">
+                        <Image x:Name="image" Source="/src/Loading.png" Stretch="Uniform"></Image>
+                        <MediaElement LoadedBehavior="Manual" x:Name="media" Source="" Visibility="Hidden" />
+                        <Image Height="75px" Width="75px" x:Name="Player_tool" Source="src/PlayerPlay.png" Stretch="Uniform" Visibility="Hidden"></Image>
+                        <Button Style="{DynamicResource InvisibleButton}" Click="Video_Click"/>
+
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30px"/>
+                            <RowDefinition/>
+                            <RowDefinition Height="60px"/>
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <StackPanel Orientation="Horizontal" Width="490px" Height="30px" VerticalAlignment="Top" >
+                                <TextBlock Height="30px" x:Name="film_title" Margin="15px 0 0 0 " Foreground="#723D92" Text="" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="Poppins" FontSize="28" FontWeight="DemiBold"/>
+
+                                <TextBlock Height="29px" Margin="55px 0 0 0" Text="Rating:"  Foreground="#723D92" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="Poppins" FontSize="24" FontWeight="DemiBold"/>
+
+                                <TextBlock Height="29px" Margin="5px 0 0 0"  x:Name="film_rating" Text=""  Foreground="#723D92" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontFamily="Poppins" FontSize="28" FontWeight="DemiBold"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="1" Margin="30px 5px 30px 0">
+                            <TextBlock x:Name="film_description" TextWrapping="WrapWithOverflow" Text="" Foreground="#723D92" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Poppins" FontSize="20" FontWeight="Medium"/>
+                        </Grid>
+
+                        <Grid Grid.Row="2" Margin="30px 0px 30px 0">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Duration:" Foreground="#723D92" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Poppins" FontSize="20" FontWeight="Medium"/>
+                                <TextBlock x:Name="film_duration" Margin="5px 0px 0 0" Text="" Foreground="#723D92" FontFamily="Poppins" FontSize="20" FontWeight="Medium"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!--Сеансы-->
+        <Grid Grid.Column="1" Grid.RowSpan="2">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Width="255px">
+                <Border Margin="60px 0 0 0" Height="40px" Width="60px" >
+                    <Button Style="{StaticResource InvisibleButton}">
+                        <StackPanel>
+                            <Image Source="src/Calendar.png" Stretch="Uniform" Width="22px"/>
+                            <TextBlock Foreground="#723D92" FontFamily="Poppins" FontWeight="Medium" Margin="0 -3px 0 0" Text="April, 18"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+
+                <Border Margin="20px 0 0 0" Height="40px" Width="60px" >
+                    <Button Style="{StaticResource InvisibleButton}">
+                        <StackPanel>
+                            <Image Source="src/Sort.png" Stretch="Uniform" Width="22px"/>
+                            <TextBlock Foreground="#723D92" FontFamily="Poppins" FontWeight="Medium" Margin="0 -3px 0 0" Text="Time ▲"/>
+                        </StackPanel>
+                    </Button>
+                </Border>
+            </StackPanel>
+            <Border BorderBrush="#723D92" BorderThickness="2px 2px 0 0">
+                <DataGrid Margin="0 40px 0 0"
+                    HorizontalAlignment="Left" Width="260px" x:Name="phonesGrid" 
+                    AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
+                    RowBackground="White" AlternatingRowBackground="White"
+                          ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Width="260" Header="Sessions">
+                            <DataGridTemplateColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="FontSize" Value="25"/>
+                                    <Setter Property="Foreground" Value="#723D92"/>
+                                    <Setter Property="FontWeight" Value="DemiBold"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    <Setter Property="FontFamily" Value="Poppins"/>
+                                </Style>
+                            </DataGridTemplateColumn.HeaderStyle>
+
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Style="{StaticResource InvisibleButton}">
+                                        <StackPanel Height="30px" Orientation="Horizontal">
+                                            <Border BorderBrush="#723D92" BorderThickness="0 0 1 0" Width="60px" >
+                                                <StackPanel Margin="-2px 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                    <TextBlock  FontSize="14" Foreground="#723D92" FontFamily="Poppins" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding Path=time}" />
+                                                    <TextBlock  FontSize="10" Foreground="#723D92" FontFamily="Poppins" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding Path=date}" />
+                                                </StackPanel>
+                                            </Border>
+
+                                            <Border BorderBrush="#723D92" BorderThickness="0 0 1 0" Width="100px" >
+                                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                    <TextBlock Foreground="#723D92" FontFamily="Poppins" FontWeight="Medium" TextAlignment="Center" Text="{Binding Path=cinemaHall_title}" />
+
+                                                </StackPanel>
+                                            </Border>
+
+                                            <Border BorderBrush="#723D92" BorderThickness="0" Width="80px" >
+                                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                    <TextBlock Foreground="#723D92" FontFamily="Poppins" FontWeight="Medium" TextAlignment="Center" Text="{Binding Path=ticket_cost}" />
+
+                                                </StackPanel>
+                                            </Border>
+                                        </StackPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+
+                    <!--<DataGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Path=Price}" />
+                                <TextBlock Text=" рублей по скидке" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGrid.RowDetailsTemplate>-->
+
+                </DataGrid>
+
+            </Border>
+        </Grid>
+    </Grid>
+</Page>

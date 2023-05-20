@@ -1,0 +1,170 @@
+﻿<Page x:Class="PracticCinema.films"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticCinema"
+      mc:Ignorable="d" 
+      d:DesignHeight="490" d:DesignWidth="760"
+      Title="films">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid x:Name="gr_film1" Grid.Row="0" Grid.Column="0"  Visibility="Hidden">
+            <StackPanel Margin="0 10px 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Border Height="200px" Width="150">
+                    <Border.Background>
+                        <ImageBrush x:Name="film1_source" Stretch="Fill" ImageSource="src/TestFilmPrev.png" AlignmentY="Center" AlignmentX="Center"/>
+                    </Border.Background>
+                    <Button x:Name="btn_1" Click="GoToFilm1_Click" Style="{DynamicResource InvisibleButton}"></Button>
+                </Border>
+
+                <TextBlock Foreground="#723d92" Margin="0 5px 0 0" Padding="5px 0 0 0"  Width="200px" FontSize="22" TextAlignment="Left" FontWeight="SemiBold" FontFamily="Poppins">
+                        <Hyperlink x:Name="xpl_1" Foreground="#723D92" TextDecorations="None" Click="GoToFilm1_Click">
+                             <TextBlock x:Name="film1_title">Loading...</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="gr_film2" Grid.Row="0" Grid.Column="1"  Visibility="Hidden">
+            <StackPanel Margin="0 10px 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Border Height="200px" Width="150">
+                    <Border.Background>
+                        <ImageBrush x:Name="film2_source" Stretch="Fill"  ImageSource="src/TestFilmPrev.png" AlignmentY="Center" AlignmentX="Center"/>
+                    </Border.Background>
+                    <Button x:Name="btn_2" Click="GoToFilm1_Click" Style="{DynamicResource InvisibleButton}"></Button>
+                </Border>
+
+                <TextBlock Foreground="#723d92" Margin="0 5px 0 0" Padding="5px 0 0 0"  Width="200px" FontSize="22" TextAlignment="Left" FontWeight="SemiBold" FontFamily="Poppins">
+                        <Hyperlink x:Name="xpl_2" Foreground="#723D92" TextDecorations="None" Click="GoToFilm1_Click">
+                             <TextBlock x:Name="film2_title">Loading...</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="gr_film3" Grid.Row="0" Grid.Column="2"  Visibility="Hidden">
+            <StackPanel Margin="0 10px 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Border Height="200px" Width="150">
+                    <Border.Background>
+                        <ImageBrush x:Name="film3_source" Stretch="Fill"  ImageSource="src/TestFilmPrev.png" AlignmentY="Center" AlignmentX="Center"/>
+                    </Border.Background>
+                    <Button x:Name="btn_3" Click="GoToFilm1_Click" Style="{DynamicResource InvisibleButton}"></Button>
+                </Border>
+
+                <TextBlock Foreground="#723d92" Margin="0 5px 0 0" Padding="5px 0 0 0"  Width="200px" FontSize="22" TextAlignment="Left" FontWeight="SemiBold" FontFamily="Poppins">
+                        <Hyperlink x:Name="xpl_3" Foreground="#723D92" TextDecorations="None" Click="GoToFilm1_Click">
+                             <TextBlock x:Name="film3_title">Loading...</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="gr_film4" Grid.Row="0" Grid.Column="3"  Visibility="Hidden">
+            <StackPanel Margin="0 10px 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Border Height="200px" Width="150">
+                    <Border.Background>
+                        <ImageBrush x:Name="film4_source" Stretch="Fill"  ImageSource="src/TestFilmPrev.png" AlignmentY="Center" AlignmentX="Center"/>
+                    </Border.Background>
+                    <Button x:Name="btn_4" Click="GoToFilm1_Click" Style="{DynamicResource InvisibleButton}"></Button>
+                </Border>
+
+                <TextBlock Foreground="#723d92" Margin="0 5px 0 0" Padding="5px 0 0 0"  Width="200px" FontSize="22" TextAlignment="Left" FontWeight="SemiBold" FontFamily="Poppins">
+                        <Hyperlink x:Name="xpl_4" Foreground="#723D92" TextDecorations="None" Click="GoToFilm1_Click">
+                             <TextBlock x:Name="film4_title">Loading...</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="gr_film5" Grid.Row="1" Grid.Column="0"  Visibility="Hidden">
+            <StackPanel Margin="0 10px 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Border Height="200px" Width="150">
+                    <Border.Background>
+                        <ImageBrush x:Name="film5_source" Stretch="Fill" ImageSource="src/TestFilmPrev.png" AlignmentY="Center" AlignmentX="Center"/>
+                    </Border.Background>
+                    <Button x:Name="btn_5" Click="GoToFilm1_Click" Style="{DynamicResource InvisibleButton}"></Button>
+                </Border>
+
+                <TextBlock Foreground="#723d92" Margin="0 5px 0 0" Padding="5px 0 0 0"  Width="200px" FontSize="22" TextAlignment="Left" FontWeight="SemiBold" FontFamily="Poppins">
+                        <Hyperlink x:Name="xpl_5" Foreground="#723D92" TextDecorations="None" Click="GoToFilm1_Click">
+                             <TextBlock x:Name="film5_title">Loading...</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="gr_film6" Grid.Row="1" Grid.Column="1"  Visibility="Hidden">
+            <StackPanel Margin="0 10px 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Border Height="200px" Width="150">
+                    <Border.Background>
+                        <ImageBrush x:Name="film6_source" Stretch="Fill"  ImageSource="src/TestFilmPrev.png" AlignmentY="Center" AlignmentX="Center"/>
+                    </Border.Background>
+                    <Button x:Name="btn_6" Click="GoToFilm1_Click" Style="{DynamicResource InvisibleButton}"></Button>
+                </Border>
+
+                <TextBlock Foreground="#723d92" Margin="0 5px 0 0" Padding="5px 0 0 0"  Width="200px" FontSize="22" TextAlignment="Left" FontWeight="SemiBold" FontFamily="Poppins">
+                        <Hyperlink x:Name="xpl_6" Foreground="#723D92" TextDecorations="None" Click="GoToFilm1_Click">
+                             <TextBlock x:Name="film6_title">Loading...</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="gr_film7" Grid.Row="1" Grid.Column="2"  Visibility="Hidden">
+            <StackPanel Margin="0 10px 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Border Height="200px" Width="150">
+                    <Border.Background>
+                        <ImageBrush x:Name="film7_source" Stretch="Fill"  ImageSource="src/TestFilmPrev.png" AlignmentY="Center" AlignmentX="Center"/>
+                    </Border.Background>
+                    <Button x:Name="btn_7" Click="GoToFilm1_Click" Style="{DynamicResource InvisibleButton}"></Button>
+                </Border>
+
+                <TextBlock Foreground="#723d92" Margin="0 5px 0 0" Padding="5px 0 0 0"  Width="200px" FontSize="22" TextAlignment="Left" FontWeight="SemiBold" FontFamily="Poppins">
+                        <Hyperlink x:Name="xpl_7" Foreground="#723D92" TextDecorations="None" Click="GoToFilm1_Click">
+                             <TextBlock x:Name="film7_title">Loading...</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="gr_film8" Grid.Row="1" Grid.Column="3" Visibility="Hidden">
+            <StackPanel Margin="0 10px 0 0" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Border Height="200px" Width="150">
+                    <Border.Background>
+                        <ImageBrush x:Name="film8_source" Stretch="Fill"  ImageSource="src/TestFilmPrev.png" AlignmentY="Center" AlignmentX="Center"/>
+                    </Border.Background>
+                    <Button x:Name="xpl_8" Click="GoToFilm1_Click" Style="{DynamicResource InvisibleButton}"></Button>
+                </Border>
+
+                <TextBlock Foreground="#723d92" Margin="0 5px 0 0" Padding="5px 0 0 0"  Width="200px" FontSize="22" TextAlignment="Left" FontWeight="SemiBold" FontFamily="Poppins">
+                        <Hyperlink x:Name="xpl8" Foreground="#723D92" TextDecorations="None" Click="GoToFilm1_Click">
+                             <TextBlock x:Name="film8_title">Loading...</TextBlock>
+                        </Hyperlink>
+                    </TextBlock>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

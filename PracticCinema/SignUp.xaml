@@ -1,0 +1,69 @@
+﻿<Window x:Class="PracticCinema.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticCinema"
+        mc:Ignorable="d"
+        Title="" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        WindowStyle="ToolWindow">
+    <Grid Background="#faffff">
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.RowSpan="2" Margin="20px 40px">
+            <StackPanel>
+                <TextBlock Margin="10px 0 0 0" FontFamily="Poppins" FontSize="26" FontWeight="DemiBold">Sign Up</TextBlock>
+                <StackPanel Margin="0 10px 0 0" Orientation="Horizontal">
+                    <TextBlock Margin="10px 0 10px 0" FontSize="13" FontWeight="SemiBold" FontFamily="Poppins">
+                    Have an account?
+                    </TextBlock>
+                    <TextBlock Margin="0px 0 10px 0" FontSize="13" FontWeight="SemiBold" FontFamily="Poppins">
+                        <Hyperlink Foreground="#723D92" TextDecorations="None" Click="Hyperlink_Click">
+                            Sign In
+                        </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+
+
+                <TextBlock HorizontalAlignment="Left" Background="#fff" Foreground="#723D92" Panel.ZIndex="2" FontSize="16" Margin="17px 40px 0 0 " FontFamily="Poppins">Email</TextBlock>
+                <TextBox x:Name="email" VerticalContentAlignment="Center" Height="26px" Margin="10px -8px 10px 0 " FontFamily="Poppins"></TextBox>
+
+                <TextBlock HorizontalAlignment="Left" Background="#fff" Foreground="#723D92" Panel.ZIndex="2" FontSize="16" Margin="17px 20px 0 0 " FontFamily="Poppins">Password</TextBlock>
+                <PasswordBox x:Name="password" VerticalContentAlignment="Center" Height="26px" Margin="10px -9px 10px 0 " FontFamily="Poppins"></PasswordBox>
+
+                <TextBlock HorizontalAlignment="Left" Background="#fff" Foreground="#723D92" Panel.ZIndex="2" FontSize="16" Margin="17px 20px 0 0 " FontFamily="Poppins">Password</TextBlock>
+                <PasswordBox x:Name="password2" VerticalContentAlignment="Center" Height="26px" Margin="10px -9px 10px 0 " FontFamily="Poppins"></PasswordBox>
+                
+                <Button Click="Button_Click" Width="200px" Height="34px" 
+                        Style="{StaticResource MenuButton}" 
+                        Margin="40px 50px 40px 0">
+
+                    <StackPanel HorizontalAlignment="Stretch">
+                        <TextBlock Foreground="#fff" FontSize="18" FontFamily="Poppins" FontWeight="Bold" TextAlignment="Center" Text="Login"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.RowSpan="2">
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="src/MainBackground.png" AlignmentY="Top" AlignmentX="Center"/>
+            </Grid.Background>
+        </Grid>
+
+    </Grid>
+</Window>
